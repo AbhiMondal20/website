@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -91,7 +88,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         ///insert data in user
         
         
-        $sql = "INSERT INTO `login_tab` ( `name`, `sname`, `email`, `password`,`cpassword`, `date_time`) VALUES ( '$name', '$sname', '$email', '$password', '$cpassword', current_timestamp())";
+        $sql = "INSERT INTO `login_tab` (`s.no`, `name`, `sname`, `email`, `password`, `cpassword`, `d&t`) VALUES ( '$name', '$sname', '$email', '$password', '$cpassword', current_timestamp())";
         $result = mysqli_query($conn , $sql);
         if($result){
           echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -107,6 +104,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
       }
+      
 
 
 
